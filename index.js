@@ -65,3 +65,12 @@ export const old = (x) => {
   let person = year - x;
   return person;
 };
+
+//8 Crea una función que reciba la edad de una persona por parámetros y verifique si es mayor de edad. Imprime por consola un string con el resultado.
+
+export const year = (x) => {
+  if (x < 18) {
+    return 'Eres menor de edad sorry :(';
+  }
+  return 'Eres mayor de edad :)';
+};

@@ -5,6 +5,7 @@ import {
   allvowels,
   countdown,
   old,
+  year,
 } from './index.js';
 
 console.log(cortar('caramelo'));
@@ -18,3 +19,5 @@ console.log(allvowels('muercielago '));
 console.log(countdown(5));
 
 console.log(old(2000));
+
+console.log(year(17));
