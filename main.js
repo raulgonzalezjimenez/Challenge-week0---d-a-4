@@ -1,4 +1,11 @@
-import { cortar, palandrino, vowels, allvowels, countdown } from './index.js';
+import {
+  cortar,
+  palandrino,
+  vowels,
+  allvowels,
+  countdown,
+  old,
+} from './index.js';
 
 console.log(cortar('caramelo'));
 
@@ -9,3 +16,5 @@ console.log(vowels('adoptar'));
 console.log(allvowels('muercielago '));
 
 console.log(countdown(5));
+
+console.log(old(2000));

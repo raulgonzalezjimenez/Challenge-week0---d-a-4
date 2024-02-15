@@ -56,4 +56,12 @@ export const countdown = (x) => {
   }
   return down;
 };
-console.log(countdown(5));
+
+//7 Escribe una función que reciba por parámetros el año de nacimiento, y calcule la edad de la persona.
+
+export const old = (x) => {
+  const date = new Date();
+  const year = date.getFullYear();
+  let person = year - x;
+  return person;
+};
