@@ -47,4 +47,13 @@ export const allvowels = (x) => {
   return vocalesSet.size === 5;
 };
 
-//6
+//6 Crea una función que realice una cuenta atrás desde un número recibido por parámetros.
+
+export const countdown = (x) => {
+  let down = [];
+  for (let i = x; i >= 0; i--) {
+    down.push(i);
+  }
+  return down;
+};
+console.log(countdown(5));
