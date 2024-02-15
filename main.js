@@ -6,6 +6,7 @@ import {
   countdown,
   old,
   year,
+  simulation,
 } from './index.js';
 
 console.log(cortar('caramelo'));
@@ -21,3 +22,5 @@ console.log(countdown(5));
 console.log(old(2000));
 
 console.log(year(17));
+
+console.log(simulation());

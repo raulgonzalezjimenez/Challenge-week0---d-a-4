@@ -74,3 +74,9 @@ export const year = (x) => {
   }
   return 'Eres mayor de edad :)';
 };
+//9 Crea una función que simule el lanzamiento de un dado e imprime por consola el resultado cada vez que se ejecuta.
+
+export const simulation = () => {
+  let randomNumber = Math.floor(Math.random() * 6 + 1);
+  return randomNumber;
+};
