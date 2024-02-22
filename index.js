@@ -1,10 +1,11 @@
 //1
 export const cortar = (x) => {
-  return x.slice(1, x.length - 1);
+  return x.slice(1, -1);
 };
 //2
 export const palandrino = (y) => {
-  const reverse1 = y.split('').reverse('').join('');
+  const loweWordinput = y.toLowerCase();
+  const reverse1 = loweWordinput.split('').reverse('').join('');
 
   return y === reverse1;
 };
@@ -80,3 +81,60 @@ export const simulation = () => {
   let randomNumber = Math.floor(Math.random() * 6 + 1);
   return randomNumber;
 };
+
+//11
+function jugarPiedraPapelTijera(opcionUsuario) {
+  var opciones = ['piedra', 'papel', 'tijera'];
+  var opcionMaquina = opciones[Math.floor(Math.random() * 3)];
+
+  var resultado = '';
+
+  if (opcionUsuario === opcionMaquina) {
+    resultado = '¡Empate!';
+  } else if (
+    (opcionUsuario === 'piedra' && opcionMaquina === 'tijera') ||
+    (opcionUsuario === 'papel' && opcionMaquina === 'piedra') ||
+    (opcionUsuario === 'tijera' && opcionMaquina === 'papel')
+  ) {
+    resultado = '¡Ganaste!';
+  } else {
+    resultado = '¡Perdiste!';
+  }
+
+  return (
+    'Elegiste ' +
+    opcionUsuario +
+    '. La máquina eligió ' +
+    opcionMaquina +
+    '. ' +
+    resultado
+  );
+}
+
+// Ejemplo de uso:
+var opcionUsuario = 'piedra'; // Puedes cambiar esto por 'papel' o 'tijera' para probar diferentes opciones
+console.log(jugarPiedraPapelTijera(opcionUsuario));
+
+// 13
+export const billCalculator = (total, percentage) => {
+  const tip = total * (percentage / 100);
+  const totalToPay = total + tip;
+  return {
+    total: Math.round(total * 100) / 100,
+    tip: Math.round(tip * 100) / 100,
+    totalToPay: Math.round(totalToPay * 100) / 100,
+  };
+};
+
+export const billRender = (total, percentage) => {
+  const data = billCalculator(total, percentage);
+  const formateadData = `
+  Total: ${data.total.toFixed(2)}
+  Propina: ${data.tip.toFixed(2)}
+  --------------------------------
+  Total a pagar: ${data.totalToPay.toFixed(2)}
+  `;
+  console.log(formateadData);
+};
+
+//14
